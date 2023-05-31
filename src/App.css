@@ -1,0 +1,14 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding-top: 63px;
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(252,243,229,1) 63%, rgba(245,219,175,1) 100%);
+}
+
+.prueba{
+  z-index: 10;
+}
