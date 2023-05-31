@@ -29,7 +29,7 @@ const NabBar = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to={"#"} className="nav-link">
+              <NavLink to={"/category/capsulas"} activeClassName="fw-bold" className="nav-link">
                 Visión
               </NavLink>
             </li>

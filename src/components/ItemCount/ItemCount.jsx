@@ -26,7 +26,7 @@ const ItemCount = ({ stock }) => {
 
   return (
     <div className="container">
-      <div className="row">
+      <div className="row text-center">
         <div className="col">
           <div className="btn-group" role="group" aria-label="Basic example">
             <button type="button" className="btn btn-light px-3 fs-4" onClick={decrement}>
