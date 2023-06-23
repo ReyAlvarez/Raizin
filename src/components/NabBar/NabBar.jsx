@@ -29,29 +29,29 @@ const NabBar = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to={"/category/capsulas"} activeClassName="fw-bold" className="nav-link">
+              <NavLink to={"/category/capsulas"} className="nav-link">
                 Visión
               </NavLink>
             </li>
             <li className="nav-item dropdown">
-              <NavLink to={"#"} activeClassName="fw-bold" className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <NavLink to={"#"} className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Productos
               </NavLink>
               <ul className="dropdown-menu">
                 <li>
-                  <NavLink to={"/category/capsulas"} activeClassName="fw-bold" className="dropdown-item">
+                  <NavLink to={"/category/capsulas"} className="dropdown-item">
                     Capsulas
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to={"/category/tinturas"} activeClassName="fw-bold" className="dropdown-item">
+                  <NavLink to={"/category/tinturas"} className="dropdown-item">
                     Tinturas
                   </NavLink>
                 </li>
               </ul>
             </li>
             <li className="nav-item">
-              <NavLink to={"#"} activeClassName="fw-bold" className="nav-link">
+              <NavLink to={"#"} className="nav-link">
                 CBD
               </NavLink>
             </li>
