@@ -63,8 +63,8 @@ const NabBar = () => {
             </button>
           </form>
         </div>
+        <CartWidget />
       </div>
-      <CartWidget />
     </nav>
   );
 };

@@ -10,9 +10,9 @@ const Cart = () => {
     return (
       <div className="container">
         <div className="row">
-          <div className="col">
-            <div class="alert alert-danger" role="alert">
-              No se encontraron productos en el carrito!
+          <div className="col text-center">
+            <div className="alert alert-danger" role="alert">
+              No hay <b>nada</b> en el carrito!
             </div>
           </div>
         </div>
@@ -29,7 +29,7 @@ const Cart = () => {
       </div>
       <div className="row">
         <div className="col">
-          <table class="table table-bordered">
+          <table className="table table-bordered">
             <tbody>
               <tr>
                 <td colSpan={4}>&nbsp;</td>
@@ -66,7 +66,7 @@ const Cart = () => {
               ))}
               <tr>
                 <td colSpan={3} className="text-end">
-                  Subtotal:
+                  Total Carrito:
                 </td>
                 <td className="text-center">$ {sumTotal()}</td>
                 <td>&nbsp;</td>

@@ -1,35 +1,31 @@
-import { useState, useEffect, useContext } from "react";
+import { useContext } from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import { CartContext } from "../Context/CartContext";
 
-const ItemDetail = ({ item }) => {
+const ItemDetail = ({ producto }) => {
   const { addItem } = useContext(CartContext);
-  const [items, setItems] = useState({});
 
   const onAdd = (quantity) => {
-    addItem(item, quantity);
+    addItem(producto, quantity);
   };
 
-  useEffect(() => {
-    setItems(item);
-  }, [item]);
   return (
     <div className="container">
       <div className="row">
         <div className="col-md-6 offset-md-3">
-          <img src={items.image} alt={items.title} className="img-fluid" />
+          <img src={producto.image} alt={producto.title} className="img-fluid" />
         </div>
         <div className="col-md-6">
-          <h1>{items.title}</h1>
-          <h4>{items.description}</h4>
+          <h1>{producto.title}</h1>
+          <h4>{producto.description}</h4>
           <hr />
-          <h5>{items.quantity}</h5>
+          <h5>{producto.quantity}</h5>
           <hr />
           <p>
-            <b>${items.price}</b>
+            <b>${producto.price}</b>
           </p>
           <div className="mb-5">
-            <ItemCount stock={items.stock} onAdd={onAdd} />
+            <ItemCount stock={producto.stock} onAdd={onAdd} />
           </div>
         </div>
       </div>

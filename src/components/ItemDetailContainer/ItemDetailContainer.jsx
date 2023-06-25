@@ -8,32 +8,20 @@ import Loading from "../Loading";
 // import products from "../json/products.json";
 
 const ItemDetailContainer = () => {
-  const [item, setItem] = useState();
+  const [item, setItem] = useState({});
   const [loading, setLoading] = useState(true);
 
   const { id } = useParams();
 
-  // useEffect(() => {
-  //   const promesa = new Promise((resolve) => {
-  //     setTimeout(() => {
-  //       let producto = products.find((item) => item.id === parseInt(id));
-  //       resolve(producto);
-  //     }, 2000);
-  //   });
-  //   promesa.then((data) => {
-  //     setItem(data);
-  //   });
-  // }, [id]);
-
   useEffect(() => {
     const db = getFirestore();
-
-    const producto = doc(db, "item", id);
+    const producto = doc(db, "items", id);
     getDoc(producto).then((resultado) => {
       setItem({ id: resultado.id, ...resultado.data() });
       setLoading(false);
     });
   }, [id]);
+
   return <>{loading ? <Loading /> : <ItemDetail producto={item} />}</>;
 };
 

@@ -5,8 +5,8 @@ const Loading = () => {
     <div className="container">
       <div className="row">
         <div className="col p-5 text-center">
-          <div class="spinner-grow text-dark" role="status">
-            <span class="visually-hidden">Loading...</span>
+          <div className="spinner-grow text-dark" role="status">
+            <span className="visually-hidden">Loading...</span>
           </div>
         </div>
       </div>
