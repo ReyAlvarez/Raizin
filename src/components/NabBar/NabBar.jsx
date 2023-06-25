@@ -56,6 +56,7 @@ const NabBar = () => {
               </NavLink>
             </li>
           </ul>
+          <CartWidget />
           <form className="d-flex" role="search">
             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
             <button className="btn btn-light" type="submit">
@@ -63,7 +64,6 @@ const NabBar = () => {
             </button>
           </form>
         </div>
-        <CartWidget />
       </div>
     </nav>
   );

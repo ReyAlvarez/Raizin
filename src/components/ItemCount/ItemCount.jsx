@@ -17,7 +17,7 @@ const ItemCount = ({ stock, onAdd }) => {
   const addToCart = () => {
     if (count <= itemStock) {
       setItemStock(itemStock - count);
-      setCount(1);
+      // setCount(1);
       setItemAdded(true);
       onAdd(count);
       console.log(`Enviaste ${count} articulos al carrito el stock actual es de ${itemStock}`);
