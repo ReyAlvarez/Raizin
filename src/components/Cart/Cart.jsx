@@ -2,7 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import { CartContext } from "../Context/CartContext";
 import trash from "../../assets/images/trash.svg";
-
+import { Link } from "react-router-dom";
 const Cart = () => {
   const { cart, removeItem, clear, cartTotal, sumTotal } = useContext(CartContext);
 
@@ -48,28 +48,32 @@ const Cart = () => {
               </tr>
               {cart.map((item) => (
                 <tr key={item.id}>
-                  <td>
+                  <td className="img-fluid">
                     <img src={item.image} alt={item.title} width={50} />
                   </td>
-                  <td>{item.title}</td>
-                  <td>{item.quantity}</td>
-                  <td>
+                  <td className="align-middle">{item.title}</td>
+                  <td className="align-middle">{item.quantity}</td>
+                  <td className="align-middle">
                     {item.quantity} x {item.price}
                   </td>
-                  <td className="text-center">${item.quantity * item.price}</td>
+                  <td className="text-center align-middle">${item.quantity * item.price}</td>
                   <td className="text-end">
-                    <button className="btn btn-light" onClick={() => removeItem(item.id)} title="Eliminar Producto">
-                      <img src={trash} alt="Eliminar Producto" width={32} />
+                    <button className="btn btn-secondary text-light" onClick={() => removeItem(item.id)} title="Eliminar Producto">
+                      <img src={trash} alt="Eliminar Producto" width={24} />
                     </button>
                   </td>
                 </tr>
               ))}
               <tr>
                 <td colSpan={3} className="text-end">
-                  Total Carrito:
+                  🛒 Total Carrito 🛒:
                 </td>
                 <td className="text-center">$ {sumTotal()}</td>
-                <td>&nbsp;</td>
+                <td className="align-middle text-end">
+                  <Link to={"/checkout"} className="btn btn-secondary text-ligth">
+                    Finalizar compra
+                  </Link>
+                </td>
               </tr>
             </tbody>
           </table>

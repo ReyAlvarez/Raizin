@@ -9,6 +9,7 @@ import Error404 from "./components/Error404";
 import CartContextProvider from "./components/Context/CartContext";
 import Checkout from "./components/Checkout";
 import Cart from "./components/Cart/Cart";
+import ThankYou from "./components/ThankYou";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path={"/cart"} element={<Cart />} />
             <Route path={"/checkout"} element={<Checkout />} />
             <Route path={"/*"} element={<Error404 />} />
+            <Route path={"/thankyou/:orderId"} element={<ThankYou />} />
           </Routes>
           <Footer />
         </BrowserRouter>

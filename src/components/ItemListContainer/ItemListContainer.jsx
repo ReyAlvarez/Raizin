@@ -40,28 +40,3 @@ const ItemsListContainer = () => {
 };
 
 export default ItemsListContainer;
-
-// Acceder a los productos desde Firestore, consulta una coleccion sin filtros
-
-// useEffect(() => {
-//   const db = getFirestore();
-//   const itemsCollection = collection(db, "items");
-//   getDocs(itemsCollection).then((resultado) => {
-//     if (resultado.size > 0){
-//     setItems(resultado.docs.map((producto) => ({ id: producto.id, ...producto.data() })));
-//   } else {
-//     console.error("error al cargar los datos")
-//   }
-//   });
-// }, []);
-
-// Proceso de exportacion
-// useEffect(() => {
-//     const db = getFirestore();
-//     const itemsCollection = collection(db, "items");
-
-//     products.forEach((producto) => {
-//         addDoc(itemsCollection, producto);
-//       });
-//       console.log("productos cargados en firestore");
-//     }, []);
